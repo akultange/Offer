@@ -499,6 +499,9 @@ table.bt tr.tot td{font:500 24px/1.2 var(--serif);border-top:1px solid var(--gra
         <div class="ctl"><div class="ctl-h"><label for="aN"><span data-l="ru">Проектов в месяц</span><span data-l="en" lang="en">Projects per month</span></label><output for="aN"></output></div>
           <input type="range" id="aN" data-k="aN" data-min="1" data-max="10" data-step="1" min="1" max="10" step="1">
           <p class="fixed"><span data-l="ru">столько же и в варианте 2</span><span data-l="en" lang="en">same in Option 2</span></p></div>
+        <div class="ctl"><div class="ctl-h"><label for="aOwn"><span data-l="ru">Твои расходы в месяц</span><span data-l="en" lang="en">Your own costs per month</span></label><output for="aOwn"></output></div>
+          <input type="range" id="aOwn" data-k="aOwn" data-f="money" data-min="0" data-max="20000" data-step="100" min="0" max="20000" step="100">
+          <p class="fixed"><span data-l="ru">маркетинг, люди, реклама, юрлицо. Для начала: та же команда и реклама, что в варианте 2</span><span data-l="en" lang="en">marketing, people, ads, company. To start: the same team and ads as in Option 2</span></p></div>
       </div>
 
       <div class="res">
@@ -514,7 +517,7 @@ table.bt tr.tot td{font:500 24px/1.2 var(--serif);border-top:1px solid var(--gra
           <div class="brace-note brace-you" aria-hidden="true"><i></i><p><span data-l="ru">Твоя наценка, вся твоя</span><span data-l="en" lang="en">Your margin, all yours</span></p></div>
           <ul class="legend">
             <li><i class="sw sw-us" aria-hidden="true"></i><span><span data-l="ru">Наша цена</span><span data-l="en" lang="en">Our price</span></span><span class="num" id="aLgUs"></span></li>
-            <li><i class="sw sw-you" aria-hidden="true"></i><span><span data-l="ru">Твоя прибыль</span><span data-l="en" lang="en">Your profit</span></span><span class="num" id="aLgYou"></span></li>
+            <li><i class="sw sw-you" aria-hidden="true"></i><span><span data-l="ru">Твоя наценка</span><span data-l="en" lang="en">Your margin</span></span><span class="num" id="aLgYou"></span></li>
           </ul>
         </figure>
         <dl class="kv" style="margin-top:26px">
@@ -526,7 +529,7 @@ table.bt tr.tot td{font:500 24px/1.2 var(--serif);border-top:1px solid var(--gra
           <p class="chart-s"><span data-l="ru">при разном числе проектов в месяц. Нажми на столбик, чтобы выбрать</span><span data-l="en" lang="en">by number of projects per month. Tap a bar to pick it</span></p>
           <svg id="aChart" role="img" aria-label="Your profit per year by projects per month"></svg>
         </div>
-        <p class="after"><span data-l="ru">Чем крупнее клиент, тем больше ты зарабатываешь. Наша цена от этого не меняется. Цифры уже за вычетом оплаты сайта (<span data-v="aSupport" data-f="money"></span> в месяц), но до твоих расходов на маркетинг и юрлицо.</span><span data-l="en" lang="en">The bigger the client, the more you earn. Our price stays the same. Figures are after the website fee (<span data-v="aSupport" data-f="money"></span> a month) and before your own marketing and company costs.</span></p>
+        <p class="after"><span data-l="ru">Чем крупнее клиент, тем больше ты зарабатываешь. Наша цена от этого не меняется. Цифры уже за вычетом оплаты сайта и твоих расходов.</span><span data-l="en" lang="en">The bigger the client, the more you earn. Our price stays the same. Figures are after the website fee and your own costs.</span></p>
       </div>
     </div>
   </div>
@@ -711,13 +714,13 @@ table.bt tr.tot td{font:500 24px/1.2 var(--serif);border-top:1px solid var(--gra
     <p class="scn" id="cScn"></p>
 
     <div class="hl" style="margin-top:32px;border-top:1px solid var(--graphite)">
-      <div><small><span data-l="ru">Вариант 1 · тебе за </span><span data-l="en" lang="en">Option 1 · you over </span><span class="hz"></span></small><b id="cA"></b><em><span data-l="ru">после оплаты сайта (<span data-v="aSupport" data-f="money"></span> в месяц), до твоих расходов на маркетинг и юрлицо</span><span data-l="en" lang="en">after the website fee (<span data-v="aSupport" data-f="money"></span> a month), before your own marketing and company costs</span></em></div>
-      <div class="you"><small><span data-l="ru">Вариант 2 · тебе за </span><span data-l="en" lang="en">Option 2 · you over </span><span class="hz"></span></small><b id="cB"></b><em id="cBnet"></em></div>
+      <div><small><span data-l="ru">Вариант 1 · тебе чистыми за </span><span data-l="en" lang="en">Option 1 · net to you over </span><span class="hz"></span></small><b id="cA"></b><em><span data-l="ru">после оплаты сайта и твоих расходов (<span data-v="aSupport" data-f="money"></span> + <span data-v="aOwn" data-f="money"></span> в месяц)</span><span data-l="en" lang="en">after the website fee and your own costs (<span data-v="aSupport" data-f="money"></span> + <span data-v="aOwn" data-f="money"></span> a month)</span></em></div>
+      <div class="you"><small><span data-l="ru">Вариант 2 · тебе чистыми за </span><span data-l="en" lang="en">Option 2 · net to you over </span><span class="hz"></span></small><b id="cB"></b><em id="cBnet"></em></div>
     </div>
 
     <div class="chart">
       <p class="chart-t"><span data-l="ru">Твой доход нарастающим итогом</span><span data-l="en" lang="en">Your income, adding up over time</span></p>
-      <p class="chart-s"><span data-l="ru">вариант 2 начинается с минуса: это твои вложения</span><span data-l="en" lang="en">Option 2 starts below zero: that's your investment</span></p>
+      <p class="chart-s"><span data-l="ru">вариант 2 начинается с минуса: это твои вложения. Вариант 1 тоже в минусе, пока продажи не покроют твои расходы</span><span data-l="en" lang="en">Option 2 starts below zero: that's your investment. Option 1 is also below zero until sales cover your costs</span></p>
       <svg id="cChart" role="img" aria-label="Both options, cumulative income"></svg>
       <ul class="keys">
         <li><i class="ln ln-g"></i><span data-l="ru">Вариант 1</span><span data-l="en" lang="en">Option 1</span></li>
@@ -733,12 +736,12 @@ table.bt tr.tot td{font:500 24px/1.2 var(--serif);border-top:1px solid var(--gra
           <th><span data-l="ru">Вариант 2</span><span data-l="en" lang="en">Option 2</span><small><span data-l="ru">Ты финансируешь запуск</span><span data-l="en" lang="en">You fund the launch</span></small></th></tr></thead>
         <tbody>
           <tr><th><span data-l="ru">Твои вложения</span><span data-l="en" lang="en">Your money in</span></th>
-            <td><span data-l="ru"><span data-v="aSupport" data-f="money"></span> в месяц за сайт и твои расходы на продажи</span><span data-l="en" lang="en"><span data-v="aSupport" data-f="money"></span> a month for the website, plus your own sales costs</span></td><td><b id="cInv"></b></td></tr>
+            <td><span data-l="ru"><span data-v="aSupport" data-f="money"></span> в месяц за сайт и твои расходы: <span data-v="aOwn" data-f="money"></span> в месяц</span><span data-l="en" lang="en"><span data-v="aSupport" data-f="money"></span> a month for the website, plus your own costs: <span data-v="aOwn" data-f="money"></span> a month</span></td><td><b id="cInv"></b></td></tr>
           <tr><th><span data-l="ru">Твоя работа</span><span data-l="en" lang="en">Your work</span></th>
             <td><span data-l="ru">Клиенты и продажи</span><span data-l="en" lang="en">Clients and sales</span></td><td><span data-l="ru">Пассивно, отчёт каждый месяц</span><span data-l="en" lang="en">Passive, a report every month</span></td></tr>
           <tr><th><span data-l="ru">Как ты зарабатываешь</span><span data-l="en" lang="en">How you earn</span></th>
             <td><span data-l="ru">Твоя наценка на каждый проект</span><span data-l="en" lang="en">Your margin on every project</span></td><td><span data-l="ru">Половина прибыли</span><span data-l="en" lang="en">Half the profit</span></td></tr>
-          <tr><th><span data-l="ru">Тебе за </span><span data-l="en" lang="en">You over </span><span class="hz"></span></th>
+          <tr><th><span data-l="ru">Тебе чистыми за </span><span data-l="en" lang="en">Net to you over </span><span class="hz"></span></th>
             <td><b id="cA2"></b></td><td><b id="cB2"></b></td></tr>
           <tr><th><span data-l="ru">Рынок</span><span data-l="en" lang="en">Market</span></th>
             <td><span data-l="ru">Твои клиенты</span><span data-l="en" lang="en">Your clients</span></td><td><span data-l="ru">Только Россия</span><span data-l="en" lang="en">Russia only</span></td></tr>
@@ -778,6 +781,8 @@ var D={
 };
 /* the rest of the investment after 6 months of running costs goes to setup (domain, tools, paperwork) */
 D.bSetup=D.bInv-D.bLaunch*(D.bMk*D.bMkS+D.bSl*D.bSlS+D.bAds+D.bFee);
+/* option 1: David's own monthly costs start at the same team and ads as option 2 */
+D.aOwn=D.bMk*D.bMkS+D.bSl*D.bSlS+D.bAds;
 var V={},k;for(k in D)V[k]=D[k];
 var root=document.documentElement,L='ru';
 var $=function(id){return document.getElementById(id);};
@@ -800,12 +805,12 @@ var T={
    pays:'Клиент платит ',full:'Полный месяц: клиенты платят ',half:function(x){return 'Прибыль '+x+', пополам';},
    noProfit:'При этих цифрах даже полный месяц не даёт прибыли',
    sumA:function(x,m){return 'до '+x+(m?' с '+m+'-го месяца':'');},
-   monthEm:function(x,n,f){var a=n%10,b=n%100;return x+' × '+n+' '+(a===1&&b!==11?'проект':(a>=2&&a<=4&&(b<12||b>14))?'проекта':'проектов')+' в месяц − '+f+' за сайт';},
+   monthEm:function(x,n,c,own){var a=n%10,b=n%100;return x+' × '+n+' '+(a===1&&b!==11?'проект':(a>=2&&a<=4&&(b<12||b>14))?'проекта':'проектов')+' в месяц, минус '+c+(own?' на сайт и твои расходы':' за сайт');},
    aWarn:'Клиент платит меньше нашей цены, и тебе ничего не остаётся.',
    scn:function(n,p,f,r){return 'Клиенты: до '+n+' '+(n===1?'проекта':'проектов')+' в месяц по '+p+'. Первая продажа на '+f+'-м месяце, дальше +1 проект '+(r>=1?'каждый месяц':r>=0.5?'раз в 2 месяца':'раз в 4 месяца')+'.';},
    sumB:function(x,m){return 'до '+x+(m?' с '+m+'-го месяца':'')+', пассивно';},
    markup:function(p){return 'это '+p+' к нашей цене';},roi:function(p){return 'доходность '+p+' на вложения';},
-   inv:function(x){return 'твои вложения: '+x;},net:function(x){return 'чистыми '+x+' после вложений';},
+   inv:function(x){return 'твои вложения: '+x;},gross:function(g,i){return g+' за вычетом твоих вложений '+i;},
    months:function(h){return h+' мес.';},from:'от ',
    cols:['Мес.','Проекты','Выручка','Расходы','Из бюджета','Прибыль','Тебе'],
    cover:function(e){return e?'месяцы 1–'+e:'весь период';},
@@ -824,12 +829,12 @@ var T={
    pays:'The client pays ',full:'A full month: clients pay ',half:function(x){return 'Profit '+x+', split in half';},
    noProfit:'With these numbers even a full month makes no profit',
    sumA:function(x,m){return 'up to '+x+(m?' from month '+m:'');},
-   monthEm:function(x,n,f){return x+' × '+n+' project'+(n===1?'':'s')+' a month − '+f+' for the website';},
+   monthEm:function(x,n,c,own){return x+' × '+n+' project'+(n===1?'':'s')+' a month, minus '+c+(own?' for the website and your costs':' for the website');},
    aWarn:'The client pays less than our price, so nothing is left for you.',
    scn:function(n,p,f,r){return 'Clients: up to '+n+' project'+(n===1?'':'s')+' a month at '+p+'. First sale in month '+f+', then +1 project '+(r>=1?'every month':r>=0.5?'every 2 months':'every 4 months')+'.';},
    sumB:function(x,m){return 'up to '+x+(m?' from month '+m:'')+', passive';},
    markup:function(p){return 'that’s '+p+' on top of our price';},roi:function(p){return p+' return on your investment';},
-   inv:function(x){return 'your investment: '+x;},net:function(x){return x+' net after your investment';},
+   inv:function(x){return 'your investment: '+x;},gross:function(g,i){return g+' minus your '+i+' investment';},
    months:function(h){return h+' months';},from:'from ',
    cols:['Mo','Projects','Revenue','Costs','From budget','Profit','To you'],
    cover:function(e){return e?'months 1–'+e:'the whole period';},
@@ -868,10 +873,11 @@ function share(key){var o=LINK[key],el;if(!o)return;V[o]=V[key];
   el=document.querySelector('[data-k="'+o+'"]');if(el)sync(el);}
 
 /* ===== calculations ===== */
-/* Option 1 per month at full pace: your margin on every project, minus the website fee you pay us */
+/* Option 1 per month at full pace: your margin on every project, minus the website fee you pay us
+   and your own costs (marketing, people, ads, company) */
 function calcA(){
-  var our=V.aOur,cli=V.aCli,n=V.aN,m=cli-our,sup=V.aSupport,month=m*n-sup;
-  return {our:our,cli:cli,n:n,m:m,mk:our?m/our*100:0,month:month,year:month*12,dep:our*V.aDeposit/100,sup:sup};
+  var our=V.aOur,cli=V.aCli,n=V.aN,m=cli-our,sup=V.aSupport,own=V.aOwn,month=m*n-sup-own;
+  return {our:our,cli:cli,n:n,m:m,mk:our?m/our*100:0,month:month,year:month*12,dep:our*V.aDeposit/100,sup:sup,own:own};
 }
 /* Option 2: the investment is a launch budget. It pays setup, then the studio's fixed costs
    (team, ads, management) month by month until it is used up. Project costs (delivery,
@@ -940,7 +946,7 @@ function cross(arr,level,i){var a=arr[i-1],c=arr[i];return (i<1||c===a)?i:i-1+(l
 
 function chartA(a){
   var svg=$('aChart'),H=230,W=prep(svg,H),pt=24,pb=28,bot=H-pb,vals=[],i,lab=null;
-  for(i=1;i<=10;i++)vals.push((a.m*i-a.sup)*12);
+  for(i=1;i<=10;i++)vals.push((a.m*i-a.sup-a.own)*12);
   var ax=axis(vals,pt,bot),y=ax.y,pl=padL(ax),slot=(W-pl)/10,bw=Math.min(46,slot*.62);
   grid(svg,ax,pl,W);
   vals.forEach(function(v,j){var n=j+1,x=pl+j*slot+(slot-bw)/2,on=n===a.n,top=Math.min(y(v),y(0));
@@ -1017,7 +1023,7 @@ function renderA(){
   $('aSplit').style.setProperty('--cols',a.our+'fr '+Math.max(a.m,0)+'fr');
   setText('aSegUs',money(a.our));setText('aSegYou',a.m>0?money(a.m):'');
   setText('aLgUs',money(a.our));setText('aLgYou',money(a.m));
-  setText('aMonthEm',t('monthEm')(money(a.m),a.n,money(a.sup)));setText('aYear',money(a.year));setText('aDep',money(a.dep));
+  setText('aMonthEm',t('monthEm')(money(a.m),a.n,money(a.sup+a.own),a.own>0));setText('aYear',money(a.year));setText('aDep',money(a.dep));
   chartA(a);return a;
 }
 function renderB(){
@@ -1048,13 +1054,14 @@ function renderB(){
   return b;
 }
 /* Compare: the same clients month by month in both options (option 2's sales start and growth).
-   Option 1 each month = projects that month × your margin − the website fee. */
+   Option 1 each month = projects that month × your margin − the website fee − your own costs.
+   Both headlines are what David keeps: option 2 after his investment. */
 function renderC(a,b){
   var H=V.bH,c1=[0],c2=[-V.bInv],s1=0;
-  b.rows.forEach(function(r){s1+=r.p*a.m-a.sup;c1.push(s1);c2.push(r.you-V.bInv);});
+  b.rows.forEach(function(r){s1+=r.p*a.m-a.sup-a.own;c1.push(s1);c2.push(r.you-V.bInv);});
   setText('cScn',t('scn')(V.bMax,money(V.bPr),V.bFirst,V.bRamp));
   setText('cA',money(s1));setText('cA2',money(s1));
-  setText('cB',money(b.you));setText('cB2',money(b.you));setText('cBnet',t('net')(sign(b.net)));setText('cInv',money(V.bInv));
+  setText('cB',money(b.net));setText('cB2',money(b.net));setText('cBnet',t('gross')(money(b.you),money(V.bInv)));setText('cInv',money(V.bInv));
   lineChart($('cChart'),H,[{v:c1,c:C.g,label:t('o1')},{v:c2,c:C.o,label:t('o2')}],{
     start:{v:-V.bInv,label:money(-V.bInv)},
     mark:b.pay?{i:cross(c2,0,b.pay),y:0,label:t('back')+' · '+t('ord')(b.pay)}:null});
