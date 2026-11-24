@@ -125,7 +125,8 @@ h1{font:500 clamp(46px,8.6vw,94px)/.97 var(--serif);letter-spacing:-.024em;margi
 .tile-n{font:500 60px/.85 var(--serif);color:var(--you)}
 .tile h2{font:500 27px/1.15 var(--serif);margin:14px 0 16px}
 .tile .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
-.tile .row > span:first-child{color:var(--muted)}
+.tile .row > span:first-child{color:var(--muted);flex:none}
+.tile .row .val{text-align:right;max-width:15em}
 .tile .big{margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
 .tile .big small{display:block;color:var(--muted);font-size:14px}
 .tile .big b{display:block;font:500 clamp(36px,5vw,46px)/1.1 var(--serif);color:var(--you);margin-top:4px}
@@ -382,7 +383,7 @@ html:not(.js) .tabs,html:not(.js) .lang{display:none}
       <span class="tile-n" aria-hidden="true">1</span>
       <h2><span data-l="ru">Ты продаёшь, мы делаем</span><span data-l="en" lang="en">You sell, we build</span></h2>
       <div class="row"><span><span data-l="ru">Клиентов приводит</span><span data-l="en" lang="en">Who brings clients</span></span><span><span data-l="ru">ты</span><span data-l="en" lang="en">you</span></span></div>
-      <div class="row"><span><span data-l="ru">Вложить</span><span data-l="en" lang="en">You put in</span></span><span class="num"><span data-l="ru">0&nbsp;$</span><span data-l="en" lang="en">$0</span></span></div>
+      <div class="row"><span><span data-l="ru">Вкладываешь</span><span data-l="en" lang="en">You put in</span></span><span class="val"><span data-l="ru">600&nbsp;$ в месяц за сайт + свои расходы на продажи</span><span data-l="en" lang="en">$600 a month for the website + your own sales costs</span></span></div>
       <div class="big"><small><span data-l="ru">Тебе в месяц</span><span data-l="en" lang="en">You per month</span></small><b class="num" id="sumA" data-n="11400">11 400&nbsp;$</b><em id="sumAe">с 8⁠-⁠го месяца</em></div>
       <span class="open"><span data-l="ru">Открыть вариант 1</span><span data-l="en" lang="en">Open option 1</span><svg aria-hidden="true"><use href="#i-go"></use></svg></span>
     </a>
@@ -390,7 +391,7 @@ html:not(.js) .tabs,html:not(.js) .lang{display:none}
       <span class="tile-n" aria-hidden="true">2</span>
       <h2><span data-l="ru">Ты вкладываешь, мы делаем всё</span><span data-l="en" lang="en">You invest, we do everything</span></h2>
       <div class="row"><span><span data-l="ru">Клиентов приводим</span><span data-l="en" lang="en">Who brings clients</span></span><span><span data-l="ru">мы</span><span data-l="en" lang="en">we do</span></span></div>
-      <div class="row"><span><span data-l="ru">Вложить</span><span data-l="en" lang="en">You put in</span></span><span class="num"><span data-l="ru">40 000&nbsp;$ один раз</span><span data-l="en" lang="en">$40,000 once</span></span></div>
+      <div class="row"><span><span data-l="ru">Вкладываешь</span><span data-l="en" lang="en">You put in</span></span><span class="val"><span data-l="ru">40 000&nbsp;$ один раз</span><span data-l="en" lang="en">$40,000 once</span></span></div>
       <div class="big"><small><span data-l="ru">Тебе в месяц</span><span data-l="en" lang="en">You per month</span></small><b class="num" id="sumB" data-n="4350">4 350&nbsp;$</b><em id="sumBe">с 8⁠-⁠го месяца, пассивно</em></div>
       <span class="open"><span data-l="ru">Открыть вариант 2</span><span data-l="en" lang="en">Open option 2</span><svg aria-hidden="true"><use href="#i-go"></use></svg></span>
     </a>
